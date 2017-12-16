@@ -1,6 +1,6 @@
 # Speech-Sandbox
 
-This project was inspired by [IBM Speech Sandbox](https://www.ibm.com/innovation/milab/work/speech-sandbox/)
+This project was inspired by [IBM Speech Sandbox](https://www.ibm.com/innovation/milab/work/speech-sandbox/). Using the [Mira Prism](https://www.mirareality.com/), [Watson Services](https://www.ibm.com/watson/products-services/), and [Poly](https://developers.google.com/poly/), user can generate any object they want in the AR space. 
 
 ## Before Getting Started 
 If you don't have an IBM Cloud account and have API keys for Speech-to-Text (STT), Text-to-Speech (TTS), and Natural Language Understand(NLU), please follow these steps. Otherwise skip ahead. 
