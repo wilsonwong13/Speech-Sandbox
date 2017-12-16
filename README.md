@@ -19,6 +19,6 @@ If you don't have a Poly API key you need to get one
 ## Commands
 - To make your request, start your request with "Watson" 
 - For example: "Watson, I want a piano" or "Watson get me a car"
-- This request get sent to NLU and the keywords of the string will to be sent to Poly for keywords 
+- This request get sent to NLU and the keywords of the string will to be sent to Poly 
 - Then choose which asset you want by clicking on them, make sure you see a green dot over the object you want to select 
 - You can restart the scene by saying restart 
