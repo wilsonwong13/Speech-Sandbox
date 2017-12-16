@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{3CAC4C16-EA9C-ABE4-9CBF-EBD6CBEE357C}|Unit Tests">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/unity-sdk-2.0.0/Scripts/Debug/DebugReactor.cs">
+    <Files>
+      <File FileName="Assets/Script/singleAssestDisplay.cs" Line="40" Column="10" />
+      <File FileName="Assets/Script/MulitAssets.cs" Line="21" Column="9" />
+      <File FileName="Assets/Script/WatsonServices.cs" Line="109" Column="35" />
+      <File FileName="Assets/MiraSDK/Scripts/EventSystem/MiraGraphicRaycast.cs" Line="50" Column="1" />
+      <File FileName="Assets/unity-sdk-2.0.0/Scripts/Debug/DebugReactor.cs" Line="60" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-firstpass PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

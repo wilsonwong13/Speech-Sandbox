@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mira + Poly API", "Assembly-CSharp.csproj", "{E522472F-621E-3D69-76D3-2B21763F6EFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mira + Poly API", "Assembly-CSharp-firstpass.csproj", "{96D0F2CA-E9CF-F6FA-BC5C-4610ABC0E8DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mira + Poly API", "Assembly-CSharp-Editor.csproj", "{1F7D1B31-5A57-AA7F-ED3C-A6062F50039C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E522472F-621E-3D69-76D3-2B21763F6EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E522472F-621E-3D69-76D3-2B21763F6EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E522472F-621E-3D69-76D3-2B21763F6EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E522472F-621E-3D69-76D3-2B21763F6EFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96D0F2CA-E9CF-F6FA-BC5C-4610ABC0E8DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D0F2CA-E9CF-F6FA-BC5C-4610ABC0E8DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D0F2CA-E9CF-F6FA-BC5C-4610ABC0E8DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D0F2CA-E9CF-F6FA-BC5C-4610ABC0E8DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F7D1B31-5A57-AA7F-ED3C-A6062F50039C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F7D1B31-5A57-AA7F-ED3C-A6062F50039C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F7D1B31-5A57-AA7F-ED3C-A6062F50039C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F7D1B31-5A57-AA7F-ED3C-A6062F50039C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

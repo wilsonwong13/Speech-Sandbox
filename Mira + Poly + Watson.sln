@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mira + Poly + Watson", "Assembly-CSharp.csproj", "{65688D02-AE6F-86FE-3250-59D663677944}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mira + Poly + Watson", "Assembly-CSharp-firstpass.csproj", "{9A44DFA7-C72A-9617-3A8A-2988D1D1E6E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mira + Poly + Watson", "Assembly-CSharp-Editor.csproj", "{9F1E3198-FA12-68C0-6CE7-9F80B5509ADE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65688D02-AE6F-86FE-3250-59D663677944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65688D02-AE6F-86FE-3250-59D663677944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65688D02-AE6F-86FE-3250-59D663677944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65688D02-AE6F-86FE-3250-59D663677944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A44DFA7-C72A-9617-3A8A-2988D1D1E6E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A44DFA7-C72A-9617-3A8A-2988D1D1E6E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A44DFA7-C72A-9617-3A8A-2988D1D1E6E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A44DFA7-C72A-9617-3A8A-2988D1D1E6E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F1E3198-FA12-68C0-6CE7-9F80B5509ADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F1E3198-FA12-68C0-6CE7-9F80B5509ADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F1E3198-FA12-68C0-6CE7-9F80B5509ADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F1E3198-FA12-68C0-6CE7-9F80B5509ADE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

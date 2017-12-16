@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Scene/Mira Poly Watson.unity
+  isLoaded: 1
+  isActive: 1
