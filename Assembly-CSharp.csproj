@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{65688D02-AE6F-86FE-3250-59D663677944}</ProjectGuid>
+    <ProjectGuid>{9FF6ABB6-A459-C2AB-3780-38101CB6F89F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_2_1;UNITY_2017_2;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_SPATIALTRACKING;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_2_1;UNITY_2017_2;UNITY_2017;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_RUNTIME_GI;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_NETWORK;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_IOS_NATIVE_CRASH_REPORTING;PLAYERCONNECTION_LISTENS_FIXED_PORT;DEBUGGER_LISTENS_FIXED_PORT;PLATFORM_SUPPORTS_ADS_ID;SUPPORT_ENVIRONMENT_VARIABLES;PLATFORM_SUPPORTS_PROFILER;PLATFORM_HAS_NO_SUPPORT_FOR_BUCKET_ALLOCATOR;STRICTCPP_NEW_DELETE_SIGNATURES;HAS_NEON_SKINNIG;UNITY_GFX_USE_PLATFORM_VSYNC;UNITY_INPUT_SIMULATE_EVENTS;PLATFORM_ALWAYS_USES_STDOUT_FOR_LOG;ENABLE_VR;ENABLE_AR;ENABLE_SPATIALTRACKING;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;PLATFORM_IOS;UNITY_IOS;PLATFORM_IPHONE;UNITY_IPHONE;UNITY_IPHONE_API;SUPPORT_MULTIPLE_DISPLAYS;ENABLE_IL2CPP;NET_2_0;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_IOS_ON_DEMAND_RESOURCES;ENABLE_IOS_APP_SLICING;UNITY_HAS_GOOGLEVR;ENABLE_MONO</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -67,6 +67,21 @@
      <Compile Include="Assets\FlatLighting\Scripts\Shadows\RangeWithStepAttribute.cs" />
      <Compile Include="Assets\FlatLighting\Scripts\Shadows\ShadowProjector.cs" />
      <Compile Include="Assets\MiraSDK\Scripts\AsymmetricFrustum.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\BTRemote\ConnectToPreviousRemote.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\BTRemote\MiraRemoteException.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\BTRemote\NativeBridge.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\BTRemote\Remote.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\BTRemote\RemoteAxisInput.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\BTRemote\RemoteBase.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\BTRemote\RemoteButtonInput.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\BTRemote\RemoteManager.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\BTRemote\RemoteMotionInput.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\BTRemote\RemoteMotionSensorInput.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\BTRemote\RemoteOrientationInput.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\BTRemote\RemotesController.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\BTRemote\RemoteTouchInput.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\BTRemote\RemoteTouchPadInput.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\BTRemote\VirtualRemote.cs" />
      <Compile Include="Assets\MiraSDK\Scripts\CamGyro.cs" />
      <Compile Include="Assets\MiraSDK\Scripts\DebugScripts\DebugMiraController.cs" />
      <Compile Include="Assets\MiraSDK\Scripts\DeviceOrientationChange.cs" />
@@ -82,6 +97,7 @@
      <Compile Include="Assets\MiraSDK\Scripts\EventSystem\MiraUserInput.cs" />
      <Compile Include="Assets\MiraSDK\Scripts\EventSystem\MiraXImmerseInput.cs" />
      <Compile Include="Assets\MiraSDK\Scripts\FollowHeadAutomatic.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\FollowHeadAutomaticScale.cs" />
      <Compile Include="Assets\MiraSDK\Scripts\GyroController.cs" />
      <Compile Include="Assets\MiraSDK\Scripts\InverseGyroController.cs" />
      <Compile Include="Assets\MiraSDK\Scripts\LaserLerp.cs" />
@@ -89,15 +105,25 @@
      <Compile Include="Assets\MiraSDK\Scripts\MiraEditorPreview.cs" />
      <Compile Include="Assets\MiraSDK\Scripts\MiraiOSBridge.cs" />
      <Compile Include="Assets\MiraSDK\Scripts\MiraLaserPointerLength.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\MiraLivePreview\MiraARVideo.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\MiraLivePreview\MiraConnectionMessageIds.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\MiraLivePreview\MiraLivePreviewEditor.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\MiraLivePreview\MiraLivePreviewPlayer.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\MiraLivePreview\MiraLivePreviewVideo.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\MiraLivePreview\MiraLivePreviewWikiConfig.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\MiraLivePreview\ObjectSerializationExtension.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\MiraLivePreview\SerializableObjects.cs" />
      <Compile Include="Assets\MiraSDK\Scripts\MiraPostRender.cs" />
      <Compile Include="Assets\MiraSDK\Scripts\MiraPreRender.cs" />
      <Compile Include="Assets\MiraSDK\Scripts\MiraReticle.cs" />
      <Compile Include="Assets\MiraSDK\Scripts\MiraViewer.cs" />
      <Compile Include="Assets\MiraSDK\Scripts\MiraWikitudeManager.cs" />
      <Compile Include="Assets\MiraSDK\Scripts\RotationalTrackingManager.cs" />
+     <Compile Include="Assets\MiraSDK\Scripts\SettingsManager.cs" />
      <Compile Include="Assets\MiraSDK\Scripts\Transition2D.cs" />
      <Compile Include="Assets\MiraSDK\TutorialAssets\Scripts\AxisSpin.cs" />
      <Compile Include="Assets\MiraSDK\TutorialAssets\Scripts\DemoSceneManager.cs" />
+     <Compile Include="Assets\MiraSDK\TutorialAssets\Scripts\DynamicallyChangeIPD.cs" />
      <Compile Include="Assets\MiraSDK\TutorialAssets\Scripts\FaceCamera.cs" />
      <Compile Include="Assets\MiraSDK\TutorialAssets\Scripts\FadeInScene.cs" />
      <Compile Include="Assets\MiraSDK\TutorialAssets\Scripts\Fishingline.cs" />
@@ -387,6 +413,7 @@
      <None Include="Assets\PolyToolkit\Internal\tbt\Brushes\Basic\WaveformPulse\NeonPulse.shader" />
      <None Include="Assets\PolyToolkit\Internal\tbt\Brushes\Basic\Highlighter\AdditiveCutout.shader" />
      <None Include="Assets\PolyToolkit\Internal\tbt\Shaders\Include\Brush.cginc" />
+     <None Include="Assets\MiraSDK\Materials\MiraReticle.shader" />
      <None Include="Assets\PolyToolkit\ThirdParty\GPU-Voronoi-Noise\Assets\GPUVoronoiNoise\Shader\BlocksGemGPUVoronoiNoise.cginc" />
      <None Include="Assets\FlatLighting\Shaders\cginc\FlatLightingLightmapping.cginc" />
      <None Include="Assets\PolyToolkit\Internal\tbt\Brushes\Basic\Waveform\Waveform.shader" />
@@ -433,7 +460,7 @@
      <None Include="Assets\PolyToolkit\Internal\tbt\Brushes\Shared\Shaders\DiffuseDoubleSided.shader" />
      <None Include="Assets\PolyToolkit\Internal\tbt\Brushes\Shared\Shaders\StandardSingleSided.shader" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>/Users/wilson.wong@ibm.com/Desktop/Personal Project /Mira + Poly + Watson/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>/Users/wilson.wong@ibm.com/Desktop/Github/Speech-Sandbox/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -466,16 +493,16 @@
  <HintPath>/Applications/Unity/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
  <Reference Include="WikitudeUnityPlugin">
- <HintPath>/Users/wilson.wong@ibm.com/Desktop/Personal Project /Mira + Poly + Watson/Assets/MiraSDK/Wikitude/Dependencies/WikitudeUnityPlugin.dll</HintPath>
+ <HintPath>/Users/wilson.wong@ibm.com/Desktop/Github/Speech-Sandbox/Assets/MiraSDK/Wikitude/Dependencies/WikitudeUnityPlugin.dll</HintPath>
  </Reference>
  <Reference Include="DistortionCompilation">
- <HintPath>/Users/wilson.wong@ibm.com/Desktop/Personal Project /Mira + Poly + Watson/Assets/Plugins/DistortionCompilation.dll</HintPath>
+ <HintPath>/Users/wilson.wong@ibm.com/Desktop/Github/Speech-Sandbox/Assets/Plugins/DistortionCompilation.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>/Users/wilson.wong@ibm.com/Desktop/Personal Project /Mira + Poly + Watson/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+ <HintPath>/Users/wilson.wong@ibm.com/Desktop/Github/Speech-Sandbox/Assets/PolyToolkit/ThirdParty/Json-NET-for-Unity/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>/Users/wilson.wong@ibm.com/Desktop/Personal Project /Mira + Poly + Watson/Assets/unity-sdk-2.0.0/Plugins/websocket-sharp.dll</HintPath>
+ <HintPath>/Users/wilson.wong@ibm.com/Desktop/Github/Speech-Sandbox/Assets/unity-sdk-2.0.0/Plugins/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Users/wilson.wong@ibm.com/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
@@ -486,7 +513,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{9A44DFA7-C72A-9617-3A8A-2988D1D1E6E1}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{437CD7AD-D00C-3333-2C27-3D553E7DDF65}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

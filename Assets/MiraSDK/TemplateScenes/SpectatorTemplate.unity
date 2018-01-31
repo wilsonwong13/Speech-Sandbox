@@ -42,7 +42,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 11
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 8
+    serializedVersion: 9
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -77,17 +77,19 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
   m_LightingDataAsset: {fileID: 0}
-  m_ShadowMaskMode: 2
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -107,6 +109,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    debug:
+      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1 &382716150
 GameObject:
@@ -147,6 +151,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -162,6 +167,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -302,6 +308,16 @@ Prefab:
     - target: {fileID: 114053140264756752, guid: 38c29d463a63e46ec94466fa67ebbbdd,
         type: 2}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114101558981840482, guid: 38c29d463a63e46ec94466fa67ebbbdd,
+        type: 2}
+      propertyPath: _WikitudeLicenseKey
+      value: T4GsoLau7UH0sZT4mK+IajMu+ULNuTLdSDM2OhX+EZzNdQQidnhsHpqsrESk+yYRr2gvXRaSLDoi0iuwYjPKhHp2h1j5q4537ETkH3rfo0tEh3Zax1YFzcPCx7AdwUQ1nhjy0Yyx+vc0v76NMxRep+YPxNUGnM929zkT+/UUFcZTYWx0ZWRfX4gICDyoRTpU5a7JD3lXVczDTbJrXP3wUMnVhDbgbRh2d4gsQelCyZCB9eBUtNUeUp0RZkuRlNVK7tr4ZAFvBxJvfJ7fR+hSR92gFRosNirROAOJ8Oxy/96/7Unwjg7zU8uyOWQOK7E9ASEnrhpu8xqHanlVJr6/zP1Ro2npyL2ycvFAVbr/RLQ1MiWu5KTT1bMOnUf1kl+CHvFPwX+SLHdNhmV1e4yfU5sHVbBB29j0kcaLJqWWVIaTnKx0VdKBnLZmoEPJgjGy/cWniicxNTRNRQpmxG8XNFYak07a6/7QZsOk34kbTBpFFXevCz2hpJPVlSmq4PvLwj3m2XUvaHbgwrH7qCHHIrbml/2JhaLQuSzVEqCq9h2dTblwOAQRCKjA1W4x+NDZ/CFNPl53LXiU7V4aH0Nt5jd2DOcRbGqAeQxoXKTTPPquUvOAaniUlXXIvFo80nBRp5OAaRwvAdmCLlshp18Xr6JNncPDuRNbuxFa7VAhgedspvRFB4Yemk/V8go5xBEjWmjSalSOM5XhJEfusqs9EA==
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867619331307678, guid: 38c29d463a63e46ec94466fa67ebbbdd,
+        type: 2}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -372,47 +388,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 24.831001, y: -9.426001, z: 52.913002}
---- !u!1 &1825502652 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1299453534025710, guid: 38c29d463a63e46ec94466fa67ebbbdd,
-    type: 2}
-  m_PrefabInternal: {fileID: 1611871556}
---- !u!20 &1825502653
-Camera:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1825502652}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 3
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.001
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
 --- !u!1 &2113576684
 GameObject:
   m_ObjectHideFlags: 0

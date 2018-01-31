@@ -1,5 +1,18 @@
-﻿using UnityEngine;
-using Ximmerse.InputSystem;
+﻿// Copyright (c) Mira Labs, Inc., 2017. All rights reserved.
+//
+// Downloading and/or using this MIRA SDK is under license from MIRA,
+// and subject to all terms and conditions of the Mira SDK License Agreement,
+// found here: https://www.mirareality.com/Mira_SDK_License_Agreement.pdf
+//
+// By downloading this SDK, you agree to the Mira SDK License Agreement.
+//
+// This SDK may only be used in connection with the development of
+// applications that are exclusively created for, and exclusively available
+// for use with, MIRA hardware devices. This SDK may only be commercialized
+// in the U.S. and Canada, subject to the terms of the License.
+
+using UnityEngine;
+
 
 #if UNITY_EDITOR
 
@@ -8,42 +21,55 @@ using UnityEditor;
 #endif
 
 /// <summary>
-/// MiraXImmerseInput extends MiraUserInput and calls the XImmerse spesific SDK functions
-/// it's used by MiraController if the controllerType is XImmerse
+/// MiraBTRemoteInput extends MiraUserInput and calls the BTController spesific SDK functions
+/// it's used by MiraController if the controllerType is PrismRemote
 /// </summary>
-public class MiraXImmerseInput : MiraUserInput
+public class MiraBTRemoteInput
 {
-    private ControllerInput controller;
+    //private ControllerInput controller;
+	private RemoteBase controller;
 
-    public bool init()
+    private VirtualRemote _virtualRemote = null;
+    public VirtualRemote virtualRemote { get {return _virtualRemote; } }
+
+    private Remote _connectedRemote;
+    public Remote connectedRemote;
+
+    public bool InitVirtual()
     {
-#if UNITY_EDITOR
-        if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneWindows ||
-           EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneWindows64 ||
-           EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneOSXUniversal ||
-           EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneOSXIntel ||
-           EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneOSXIntel64 ||
-           EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneLinuxUniversal ||
-           EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneLinux64 ||
-           EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneLinux64)
+		if (controller == null)
         {
-            controller = ControllerInputManager.instance.GetControllerInput(ControllerType.LeftController);
-        }
-        else
-        {
-            Debug.Log("Attention: the XImmerse controller requires your Active Build Target to be PC Mac & Linux Standalone");
-            Debug.Log("Attention: if you wish to test the controller in the editor please switch your platform in Build Settings");
-            return false;
-        }
-#else
-		controller = ControllerInputManager.instance.GetControllerInput(ControllerType.LeftController);
-#endif
-        if (controller != null)
-        {
+            _virtualRemote = new VirtualRemote();
+            controller = _virtualRemote;
+            // Initialize with zero values to avoid nulls
+            _virtualRemote.UpdateVirtualMotion(new Utils.serializableBTRemote(Vector3.zero, Vector3.zero, Vector3.zero));
+            _virtualRemote.UpdateVirtualButtons(new Utils.serializableBTRemoteButtons(false, false, false));
+            _virtualRemote.UpdateVirtualTouchpad(new Utils.serializableBTRemoteTouchPad(false, false, Vector2.zero, false, false, false, false));
+            
             return true;
         }
         else
         {
+            Debug.Log("Controller already initialized");
+            return false;
+        }
+
+    }
+
+    public bool init()
+    {
+
+		controller =  RemoteManager.Instance.connectedRemote;
+        
+
+		if (controller != null)
+        {
+            Debug.Log("Controller Initialized");
+            return true;
+        }
+        else
+        {
+            Debug.Log("Controller Initialization Failed");
             return false;
         }
     }
@@ -64,15 +90,18 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetPosition() : Vector3.zero;
-        }
+
+	return controller != null ? Vector3.zero : Vector3.zero;
+		}
     }
 
     public Quaternion Orientation
     {
         get
         {
-            return controller != null ? controller.GetRotation() : Quaternion.identity;
+            //change to motion.orientation
+            // Debug.Log("Getting Orientation, controller = " + controller + " name = " + controller.name + "values =" + controller.motion.rotationRate.x);
+			return controller != null ? Quaternion.Euler (new Vector3 (-controller.motion.orientation.pitch,controller.motion.orientation.yaw,controller.motion.orientation.roll)) : Quaternion.identity;
         }
     }
 
@@ -80,7 +109,8 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetGyroscope() : Vector3.zero;
+            //gyro 
+			return controller != null ? new Vector3 (-controller.motion.orientation.pitch,controller.motion.orientation.yaw,controller.motion.orientation.roll) : Vector3.zero; // not sure
         }
     }
 
@@ -88,7 +118,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetAccelerometer() : Vector3.zero;
+			return controller != null ? new Vector3 (controller.motion.acceleration.x, controller.motion.acceleration.y, controller.motion.acceleration.z): Vector3.zero;
         }
     }
 
@@ -96,7 +126,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButton(ControllerRawButton.LeftThumbMove) : false;
+			return controller != null ? controller.touchPad.touchActive.isPressed : false;
         }
     }
 
@@ -104,7 +134,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButtonUp(ControllerRawButton.LeftThumbMove) : false;
+			return controller != null ? controller.touchPad.touchActive.OnReleased : false;
         }
     }
 
@@ -112,7 +142,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButtonDown(ControllerRawButton.LeftThumbMove) : false;
+			return controller != null ?  controller.touchPad.touchActive.OnPressed : false;
         }
     }
 
@@ -120,7 +150,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.touchPos : Vector2.zero;
+			return controller != null ? new Vector2 ((float)controller.touchPad.xAxis.value,(float)controller.touchPad.yAxis.value) : Vector2.zero;
         }
     }
 
@@ -128,7 +158,8 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButton(ControllerButton.Start) : false;
+			return controller != null ? controller.homeButton.isPressed : false;
+          
         }
     }
 
@@ -136,7 +167,8 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButtonUp(ControllerButton.Start) : false;
+			return controller != null ? controller.homeButton.OnReleased : false;
+               
         }
     }
 
@@ -144,7 +176,8 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButtonDown(ControllerButton.Start) : false;
+			return controller != null ? controller.homeButton.OnPressed : false;
+           
         }
     }
 
@@ -152,7 +185,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButton(ControllerButton.DpadUp) : false;
+			return controller != null ? controller.touchPad.up.isActive && controller.touchPad.button.isPressed : false;
         }
     }
 
@@ -160,7 +193,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButtonUp(ControllerButton.DpadUp) : false;
+			return controller != null ? controller.touchPad.up.isActive  && controller.touchPad.button.OnReleased : false;
         }
     }
 
@@ -168,7 +201,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButtonDown(ControllerButton.DpadUp) : false;
+			return controller != null ? controller.touchPad.up.isActive  && controller.touchPad.button.OnPressed: false;
         }
     }
 
@@ -176,7 +209,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButton(ControllerButton.DpadDown) : false;
+			return controller != null ? controller.touchPad.down.isActive  && controller.touchPad.button.isPressed: false;
         }
     }
 
@@ -184,7 +217,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButtonUp(ControllerButton.DpadDown) : false;
+			return controller != null ? controller.touchPad.down.isActive  && controller.touchPad.button.OnReleased : false;
         }
     }
 
@@ -192,7 +225,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButtonDown(ControllerButton.DpadDown) : false;
+			return controller != null ? controller.touchPad.down.isActive  && controller.touchPad.button.OnPressed : false;
         }
     }
 
@@ -200,7 +233,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButton(ControllerButton.DpadLeft) : false;
+			return controller != null ? controller.touchPad.left.isActive  && controller.touchPad.button.isPressed : false;
         }
     }
 
@@ -208,7 +241,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButtonUp(ControllerButton.DpadLeft) : false;
+			return controller != null ? controller.touchPad.left.isActive  && controller.touchPad.button.OnReleased  : false;
         }
     }
 
@@ -216,7 +249,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButtonDown(ControllerButton.DpadLeft) : false;
+			return controller != null ? controller.touchPad.left.isActive  && controller.touchPad.button.OnPressed : false;
         }
     }
 
@@ -224,7 +257,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButton(ControllerButton.DpadRight) : false;
+			return controller != null ? controller.touchPad.right.isActive  && controller.touchPad.button.isPressed : false;
         }
     }
 
@@ -232,7 +265,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButtonUp(ControllerButton.DpadRight) : false;
+			return controller != null ? controller.touchPad.right.isActive  && controller.touchPad.button.OnReleased : false;
         }
     }
 
@@ -240,7 +273,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButtonDown(ControllerButton.DpadRight) : false;
+			return controller != null ? controller.touchPad.right.isActive  && controller.touchPad.button.OnPressed : false;
         }
     }
 
@@ -250,11 +283,7 @@ public class MiraXImmerseInput : MiraUserInput
         {
             if (controller != null)
             {
-                if (controller.GetButton(ControllerButton.PrimaryThumb) ||
-                    controller.GetButton(ControllerButton.DpadUp) ||
-                    controller.GetButton(ControllerButton.DpadDown) ||
-                    controller.GetButton(ControllerButton.DpadLeft) ||
-                    controller.GetButton(ControllerButton.DpadRight))
+				if (controller.touchPad.button.OnHeld)
                 {
                     return true;
                 }
@@ -276,11 +305,7 @@ public class MiraXImmerseInput : MiraUserInput
         {
             if (controller != null)
             {
-                if (controller.GetButtonUp(ControllerButton.PrimaryThumb) ||
-                    controller.GetButtonUp(ControllerButton.DpadUp) ||
-                    controller.GetButtonUp(ControllerButton.DpadDown) ||
-                    controller.GetButtonUp(ControllerButton.DpadLeft) ||
-                    controller.GetButtonUp(ControllerButton.DpadRight))
+				if (controller.touchPad.button.OnReleased )
                 {
                     return true;
                 }
@@ -302,11 +327,7 @@ public class MiraXImmerseInput : MiraUserInput
         {
             if (controller != null)
             {
-                if (controller.GetButtonDown(ControllerButton.PrimaryThumb) ||
-                    controller.GetButtonDown(ControllerButton.DpadUp) ||
-                    controller.GetButtonDown(ControllerButton.DpadDown) ||
-                    controller.GetButtonDown(ControllerButton.DpadLeft) ||
-                    controller.GetButtonDown(ControllerButton.DpadRight))
+				if (controller.touchPad.button.OnPressed)
                 {
                     return true;
                 }
@@ -326,7 +347,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButton(ControllerButton.PrimaryTrigger) : false;
+			return controller != null ? controller.trigger.isPressed : false;
         }
     }
 
@@ -334,7 +355,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButtonUp(ControllerButton.PrimaryTrigger) : false;
+			return controller != null ? controller.trigger.OnReleased : false;
         }
     }
 
@@ -342,7 +363,7 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButtonDown(ControllerButton.PrimaryTrigger) : false;
+			return controller != null ? controller.trigger.OnPressed : false;
         }
     }
 
@@ -350,7 +371,8 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButton(ControllerButton.Back) : false;
+			return controller != null ? controller.menuButton.isPressed : false;
+            
         }
     }
 
@@ -358,15 +380,27 @@ public class MiraXImmerseInput : MiraUserInput
     {
         get
         {
-            return controller != null ? controller.GetButtonUp(ControllerButton.Back) : false;
+			return controller != null ? controller.menuButton.OnReleased : false;
         }
+             
     }
 
     public bool BackButtonPressed
     {
         get
         {
-            return controller != null ? controller.GetButtonDown(ControllerButton.Back) : false;
+			return controller != null ? controller.menuButton.OnPressed : false;
+           
         }
+    }
+
+
+
+    public void OnControllerDisconnected()
+    {
+            controller.menuButton.OnDisconnected();
+            controller.trigger.OnDisconnected();
+            controller.touchPad.button.OnDisconnected();
+            controller.homeButton.OnDisconnected();
     }
 }

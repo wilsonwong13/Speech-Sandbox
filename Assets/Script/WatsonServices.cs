@@ -46,29 +46,52 @@ public class WatsonServices : MonoBehaviour {
 
     //Camera 
     Camera m_MainCamera;
-
+        
     //Canvas
     public GameObject menu;
     MulitAssets createAssestfun = new MulitAssets();
 
     public static bool removeBackboard;
 
+    //AuthenicationTokens
+    private string _authenticationTokenSST;
+    private string _authenticationTokenTTS;
+    private string _authenticationTokenNLU;
+
     void Start()
     {
-        //STT
         LogSystem.InstallDefaultReactors();
-        Credentials credentials = new Credentials(sttUsername, sttPassword, sttUrl);
+        if (!Utility.GetToken(OnGetTokenSST, sttUrl, sttUsername, sttPassword))
+            Log.Debug("ExampleGetToken.Start()", "Failed to get token.");
+
+        if (!Utility.GetToken(OnGetTokenTTS, ttsUrl, ttsUsername, ttsPassword))
+            Log.Debug("ExampleGetToken.Start()", "Failed to get token.");
+
+        if (!Utility.GetToken(OnGetTokenNLU, nluUrl, nluUsername, nluPassword))
+            Log.Debug("ExampleGetToken.Start()", "Failed to get token.");
+
+        //STT
+        Credentials credentials = new Credentials(sttUsername, sttPassword, sttUrl)
+        {
+            AuthenticationToken = _authenticationTokenSST
+        };
         _speechToText = new SpeechToText(credentials);
         Active = true;
         StartRecording();
 
-        //NLU 
-        Credentials nlucredentials = new Credentials(nluUsername, nluPassword, nluUrl);
-        _naturalLanguageUnderstanding = new NaturalLanguageUnderstanding(nlucredentials);
-
         //TTS
-        Credentials ttscredentials = new Credentials(ttsUsername, ttsPassword, ttsUrl);
+        Credentials ttscredentials = new Credentials(ttsUsername, ttsPassword, ttsUrl)
+        {
+            AuthenticationToken = _authenticationTokenTTS
+        };
         _textToSpeech = new TextToSpeech(ttscredentials);
+
+        //NLU 
+        Credentials nlucredentials = new Credentials(nluUsername, nluPassword, nluUrl)
+        {
+            AuthenticationToken = _authenticationTokenNLU
+        };
+        _naturalLanguageUnderstanding = new NaturalLanguageUnderstanding(nlucredentials);
 
         //Canvas
         menu.SetActive(false);
@@ -116,13 +139,29 @@ public class WatsonServices : MonoBehaviour {
         }
     }
 
+    //Getting Authentication Token for Watson Services 
+    private void OnGetTokenSST(AuthenticationToken authenticationToken, string customData)
+    {
+        _authenticationTokenSST = authenticationToken.ToString();
+    }
+
+    private void OnGetTokenTTS(AuthenticationToken authenticationToken, string customData)
+    {
+        _authenticationTokenTTS = authenticationToken.ToString();
+    }
+
+    private void OnGetTokenNLU(AuthenticationToken authenticationToken, string customData)
+    {
+        _authenticationTokenNLU = authenticationToken.ToString();
+    }
+
+
     //Making a request Poly method 
     private void requestPolyAssets() {
         PolyListAssetsRequest req = new PolyListAssetsRequest();
         req.keywords = nluResults;
         req.curated = true;
-        req.orderBy = PolyOrderBy.BEST;
-        req.formatFilter = PolyFormatFilter.BLOCKS;
+        req.orderBy = PolyOrderBy.BEST; 
         PolyApi.ListAssets(req, ListAssetsCallback);
     }
 

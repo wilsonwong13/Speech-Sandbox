@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{9FF6ABB6-A459-C2AB-3780-38101CB6F89F}|Unit Tests">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/MulitAssets.cs">
+    <Files>
+      <File FileName="Assets/Script/WatsonServices.cs" Line="36" Column="72" />
+      <File FileName="Assets/Script/singleAssestDisplay.cs" Line="69" Column="1" />
+      <File FileName="Assets/Script/MulitAssets.cs" Line="97" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -7,7 +7,7 @@ using PolyToolkit;
 public class MulitAssets : MonoBehaviour
 {
     public GameObject singleAssetsprefab;
-    public GameObject backboard; 
+    public GameObject backboard;
     public static Transform InstanceBackboard { get { return backboardSingleton; } }
     public static GameObject InstanceSingleAsset { get { return singleAssetPrefSingleton; } }
     public static bool creatingAssestsMessageFlag;
@@ -28,7 +28,8 @@ public class MulitAssets : MonoBehaviour
     }
 
     //Destorying each child on the backpanel
-    public static void destoryChildern() {
+    public static void destoryChildern()
+    {
         foreach (Transform child in backboardSingleton.transform)
         {
             Destroy(child.gameObject);
@@ -45,7 +46,7 @@ public class MulitAssets : MonoBehaviour
         else
         {
             //Getting Button
-            GameObject newButton = Instantiate(singleAssetPrefSingleton) as GameObject; 
+            GameObject newButton = Instantiate(singleAssetPrefSingleton) as GameObject;
             newButton.transform.SetParent(backboardSingleton, false);
             singleAssestDisplay newButtonObject = newButton.GetComponent<singleAssestDisplay>();
             //Setting up each button with props
@@ -63,6 +64,7 @@ public class MulitAssets : MonoBehaviour
         }
         numberOfAssetsFoundFromPoly = result.Value.assets.ToArray().Length.ToString();
         creatingAssestsMessageFlag = true;
+
         foreach (PolyAsset asset in result.Value.assets)
         {
             PolyApi.FetchThumbnail(asset, createAssetsThumbnail);
@@ -72,20 +74,23 @@ public class MulitAssets : MonoBehaviour
     }
 
     //When the user press the next button on the UI, the panel moves 
-    public void movePanelNext() {
-        if(totalPanelSum + 101 < backboard.transform.childCount * 101 + 101) {
+    public void movePanelNext()
+    {
+        if (totalPanelSum + 101 < backboard.transform.childCount * 101 + 101)
+        {
             var panel = backboard.GetComponent<RectTransform>();
             panel.localPosition += Vector3.right * -101;
             totalPanelSum = totalPanelSum + 101;
-        } 
+        }
     }
 
-    public void movePanelBack() {
+    public void movePanelBack()
+    {
         if (totalPanelSum - 101 > startingPanelsSum - 101)
         {
             var panel = backboard.GetComponent<RectTransform>();
             panel.localPosition += Vector3.right * 101;
-            totalPanelSum = totalPanelSum - 101; 
+            totalPanelSum = totalPanelSum - 101;
         }
     }
 }

@@ -16,7 +16,7 @@ af723155c251fcfa0e66530a75f3ea4c UnityEngine.Timeline.dll:UnityEngine.Timeline.T
 5fda950a2e80a47f05d30d37d2c39024 Assembly-CSharp.dll:.MulitAssets
 910692a40e2a7acb5d900302dc64b536 Assembly-CSharp.dll:.ScaleOverride
 280d0a2436718662e4e38b2babcbf443 Assembly-CSharp.dll:.MiraExampleInteractionScript
-a0b7910f5a7d041403e8580847483bbe Assembly-CSharp.dll:Mira.Transition2D
+e8f87982a4203257bc96ae0f8f8033ef Assembly-CSharp.dll:Mira.Transition2D
 1b1a7a1429d819e34ed7aa3c4e9f5fc3 Assembly-CSharp.dll:.Rotate
 ab61c69f36f44c393addff939e404e9e Assembly-CSharp.dll:FullSerializer.fsAotConfiguration
 2483fa69fed76486d177427c6aaf02e2 Assembly-CSharp.dll:.ControllerVisual
@@ -122,7 +122,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 af723155c251fcfa0e66530a75f3ea4c UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleAlchemyDataNews
-740a36efdf4bb73de51d3a9fd9d73e82 Assembly-CSharp.dll:.MiraReticle
+b40b816d34e993470851859626535605 Assembly-CSharp.dll:.MiraReticle
 3321051c6b7c51ac223fc3f767b889a3 Assembly-CSharp.dll:IBM.Watson.DeveloperCloud.Utilities.NestedPrefabs
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Mira.InverseGyroController
 614238bd5dee330d875a50cf47df81f4 Assembly-CSharp.dll:.SceneLigtingSetup
@@ -142,7 +142,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
-3685de52783904ea8aee6f2d01f3789b Assembly-CSharp.dll:.MiraController
+cd6e79680b19b61a9801da745e62ee00 Assembly-CSharp.dll:.MiraController
 60b83a7b8a46efa9b10d9d99cbc83dd4 Assembly-CSharp.dll:.FPSCounter
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleNaturalLanguageUnderstanding
@@ -244,7 +244,7 @@ c4d1d2d372b8212286c5e5397c85203c Assembly-CSharp.dll:.PlayerPrefsEx
 af9091bc95bb702981df47a4a42b2ac1 Assembly-CSharp.dll:Ximmerse.InputSystem.XHawkInput_OutsideIn
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:IBM.Watson.DeveloperCloud.Editor.TravisIntegrationTests
 a842018446de0c61423a68ebf68319ad Assembly-CSharp.dll:.MiraPhysicsRaycast
-d3610c578ee22d7e0aab8267f7ad2113 Assembly-CSharp.dll:Mira.MiraViewer
+52eba817e96798c12b6257fa3f87b769 Assembly-CSharp.dll:Mira.MiraViewer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Mira.MiraEditorPreview
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:PolyToolkitInternal.model.util.BackgroundMain
 c9fded6f66b7a5102b82646d1a4db536 Assembly-CSharp.dll:.CubeGridCreator
@@ -281,7 +281,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 e7d0b05b6c362b922e0797f8e6f53ce7 Assembly-CSharp.dll:FlatLighting.ShadowProjector
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MiraPhysicsPlaypenBoundary
 84f2d021f8e4ac06aa3725f78191fa8c Assembly-CSharp.dll:Mira.CamGyro
-2afbeaeece1a2ccd867907d0a46d9baf Assembly-CSharp.dll:.MiraWikitudeManager
+5c29dbf5ecf1f1ff8f2195c0fbf81959 Assembly-CSharp.dll:.MiraWikitudeManager
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ToggleModes
 5314b40f9539aa5b9c789be2be5df6c3 Assembly-CSharp.dll:Ximmerse.InputSystem.TrackerInput
 557a00d6c315217c63dc40827a208264 Assembly-CSharp.dll:Ximmerse.UI.UIFade
@@ -291,7 +291,7 @@ e7d0b05b6c362b922e0797f8e6f53ce7 Assembly-CSharp.dll:FlatLighting.ShadowProjecto
 2a56361227def9f56c2cf57a88b32f4d UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
-042c2456636eeca6c48f8b46637fef71 Assembly-CSharp.dll:Mira.MiraArController
+2ba2dbb446080248fd21ca898ca697ef Assembly-CSharp.dll:Mira.MiraArController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleRetrieveAndRank
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MiraPreRender
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
@@ -304,13 +304,13 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
-447894a64d24bc64fcbe8ddd71af7dc1 Assembly-CSharp.dll:.singleAssestDisplay
+ac39e62f41ebdb5c077f771f65a88abc Assembly-CSharp.dll:.singleAssestDisplay
 8a8bbf8c923aa45b1565ce9733c32e8e Assembly-CSharp.dll:.HelloPoly
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 098ae7266c40c179403e17df86f2f838 Assembly-CSharp.dll:FlatLighting.SpotLight
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleLanguageTranslation
 8b2457f280ce2f495d70503228bc3a6d Assembly-CSharp.dll:IBM.Watson.DeveloperCloud.Utilities.FrameRateCounter
-6a11221fcbb99b2acc439c07a2ecd6b4 Assembly-CSharp.dll:Mira.Fishingline
+e88b572a76467abfaf4a267e8d4db362 Assembly-CSharp.dll:Mira.Fishingline
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Mira.RotationalTrackingManager
 f54a6e99ec4cd86618fa2fe24a20e751 Assembly-CSharp.dll:Ximmerse.UI.VRRaycaster
 adca8b3bef673c565760e473f0e1f9d1 Assembly-CSharp.dll:.MiraGraphicRaycast
@@ -324,7 +324,7 @@ c17d43a1805cda9fc51d03d17ae25d41 Assembly-CSharp.dll:.MaterialSwapper
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:PolyToolkitInternal.client.model.util.WebRequestManager
 0c1027a6b721c78c0617b2770d6175a8 Assembly-CSharp.dll:.PlayAreaRenderer
 2ad54f6937d4885735d0d43cd8c6d1a3 Assembly-CSharp.dll:.MarkerRotationWatcher
-a74a737f4c6e67d9a6a1b9adb9fa673b Assembly-CSharp.dll:.FadeInScene
+133a76556e369dda1f779b7c2a3e93a5 Assembly-CSharp.dll:.FadeInScene
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:PolyToolkit.PolyToolkitManager
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:PolyToolkitInternal.PolyMainInternal
 2a960877accc0f69d72efda9dd4f899c Assembly-CSharp.dll:.TrackerInputTest
@@ -361,7 +361,7 @@ a9e1c36c671666e79706791e556d5100 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehav
 9566419fd319c68c3467abeb22cd018c Assembly-CSharp.dll:.HapticsLibrary
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:.MiraiOSBridge
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MiraPointerManager
-8c7bbd29147dc084742dd021826a9578 Assembly-CSharp.dll:Mira.MiraPostRender
+b7104a7dc33409591f8d78787f44e029 Assembly-CSharp.dll:Mira.MiraPostRender
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleDiscovery
 9a9c22a74e93cdf3d10303cb745595d7 Assembly-CSharp.dll:.PlayAreaHelper
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExampleNaturalLanguageClassifier
@@ -394,3 +394,14 @@ a9e1c36c671666e79706791e556d5100 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehav
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DynamicallyChangeIPD
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityEngine.XR.iOS.MiraLivePreviewEditor
+ce88eb5ab2bcf745dcf3de75a6e2e5dd Assembly-CSharp.dll:.SettingsManager
+92c4d8dbc379a9b32454bd9aaa054b41 Assembly-CSharp.dll:.RemotesController
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ConnectToPreviousRemote
+cd3f903205eac97bd2bd6d2bd745a8ce Assembly-CSharp.dll:UnityEngine.XR.iOS.MiraLivePreviewVideo
+952f370b27a2a12f4e2c817977d5209e Assembly-CSharp.dll:Mira.FollowHeadAutomaticScale
+3595fc1d0ab5c58a1cb26b1c027cffce Assembly-CSharp.dll:.MiraARVideo
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MiraLivePreviewWikiConfig
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityEngine.XR.iOS.MiraLivePreviewPlayer
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RemoteManager
